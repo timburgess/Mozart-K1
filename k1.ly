@@ -1,9 +1,9 @@
-\version "2.20"
+\version "2.23"
 
 \header {
   title = "Minuet and Trio"
   subtitle = "K1"
-  composer =	"Wolfgang Amadeus Mozart (1756-1791)"
+  composer = "Wolfgang Amadeus Mozart (1756-1791)"
   style = "Classical"
   license = "Public Domain"
   maintainer = "Tim Burgess"
@@ -18,9 +18,11 @@ global = {
 rh-g =  {
   \key g \major
   \relative g' {
-    \partial 4 b'8( g8 b,4)-. c4-. d4-. d4( c4)    a'8( fis8 a,4)-. b4-. c4-. c4( b4) b'8( g8 \break
+    \repeat volta 2 {
+      \partial 4 b'8( g8 b,4)-. c4-. d4-. d4( c4)    a'8( fis8 a,4)-. b4-. c4-. c4( b4) b'8( g8 \break
 
-    e4) g8( e8 cis4)  e8( cis8 a8 g8 fis4)   \tuplet 3/2 { b8( a8 g8 } fis4)-. e4-. d2 s4 \break
+      e4) g8( e8 cis4)  e8( cis8 a8 g8 fis4)  \tuplet 3/2 { b8( a8 g8 } fis4)-. e4-. | d2 \break
+    }
 
     \partial 4 d'8( b8 gis4)-. f'4-. e4-. d4( c4) c8( a8 fis4)-. e'4-. d4-. c4( b4) e8( c8 \break
     
@@ -46,9 +48,11 @@ rh = {
 }
 
 lh =  {
-  \relative g' {
+  \relative g {
     \partial 4 r4
-    R2.*8
+    g4-. a4-. b4-. | b4 a4 r4 |
+    f4-. g4-. a4-. | a4 g4 r4 |
+    g2 e4 | cis4 a4 d4 | g4 a4-. a,4-. | d4-. d,4-.
 
     \partial 4 r4
     R2.*8
