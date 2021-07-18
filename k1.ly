@@ -36,10 +36,11 @@ rh-c =  {
   \key c \major
   \relative g' {
     % bar 18
-    \partial 4 c8( g8 e4)-. e4-. d8( e8) e4( f4) d'8( b8 f4)-. f4-.  e8( d8) d4( e4) e'16( d c b \break
+    \repeat volta 2 {
+      \partial 4 c8( g8 e4)-. e4-. d8( e8) e4( f4) d'8( b8 f4)-. f4-.  e8( d8) d4( e4) e'16( d c b \break
 
-    a4 a'4) d,16( c b a g4 g'4) d16( b a g e'4 d4)-.  fis,4-. a4( g4) s4 \break
-
+      a4 a'4) d,16( c b a g4 g'4) d16( b a g e'4 d4)-.  fis,4-. a4( g4) s4 \break
+    }
   }
 }
 
