@@ -41,6 +41,13 @@ rh-c =  {
 
       a4 a'4) d,16( c b a g4 g'4) d16( b a g e'4 d4)-.  fis,4-. a4( g4) s4 \break
     }
+
+    \repeat volta 2 {
+      \partial 4 g'8( e8 cis4)-. cis4-. d8( e8) e4( f4) f8( d8 b4)-. b4-. c8( d8) d4( e4) a16( g f e \break
+
+       d4 d'4) g,16( f e d c4 c'4)  g16( e d c a'4 g4)-. b,4-. d4( c4)
+
+    }
   }
 }
 
@@ -48,7 +55,6 @@ rh = {
   \clef "treble"
   \rh-g
   \rh-c
-  \bar "|."
 }
 
 lh =  {
@@ -68,6 +74,11 @@ lh =  {
     \partial 4 c,8 e8
     R2.*8
 
+    \partial 4 r4
+    R2.*7
+
+    c2
+
   }
 }
 
@@ -82,7 +93,25 @@ lh =  {
       \lh
     >>
   >>
-  \layout { }
+  \layout {
+     % put key sig change before volta
+     \context {
+        \Score
+        \override BreakAlignment.break-align-orders =
+           #(make-vector 3 '(
+                    left-edge
+                    cue-end-clef
+                    ambitus
+                    breathing-sign
+                    clef
+                    cue-clef
+                    key-cancellation
+                    staff-bar
+                    key-signature
+                    time-signature
+                    custos))
+    }
+  }
   \midi { }
 }
    
