@@ -84,14 +84,14 @@ lh-c = {
         \partial 4
         c,8( e8 <c g'>4)-. <c g'>4-. <b g'>4-. | <c g'>4( d4) <b g'>8( d8 <b g'>4)-. <b g'>4-. <b g'>4-.
 
-        <c g>2 c'16( b16 a16 g16 fis2) b16( a16 g16 fis16 e2) b'4( c4 d4-.) d,4-. | g2
+        <c g'>2 c'16( b16 a16 g16 fis2) b16( a16 g16 fis16 e2) b'4( c4 d4-.) d,4-. | g2
       }
 
       \repeat volta 2 {
         \partial 4
-        r4 R2.*7
+        r4 a4-. <g a>4-. <a f>8( e8) | <e a>4( d4) r4 | g4-. <f g>4-. <e g>8( d8) | <d g>4( c4) f'16( e16 d16 c16
 
-        c2
+        b2) e16( d16 c16 b16 a2) e4( f4 g4)-. g,4-. c2
       }
   }
 }
