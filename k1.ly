@@ -39,7 +39,7 @@ rh-c =  {
     \repeat volta 2 {
       \partial 4 c8( g8 e4)-. e4-. d8( e8) e4( f4) d'8( b8 f4)-. f4-.  e8( d8) d4( e4) e'16( d c b \break
 
-      a4 a'4) d,16( c b a g4 g'4) d16( b a g e'4 d4)-.  fis,4-. a4( g4) s4 \break
+      a4 a'4) d,16( c b a g4 g'4) d16( b a g e'4 d4)-.  fis,4-. a4( g4) \break
     }
 
     \repeat volta 2 {
@@ -57,29 +57,49 @@ rh = {
   \rh-c
 }
 
-lh =  {
-  \clef "bass"
+lh-g =  {
+  \key g \major
   \relative g {
-    \key g \major
-    \partial 4 r4
-    g4-. a4-. b4-. | b4( a4) r4 |
-    fis4-. g4-. a4-. | a4( g4) r4 |
-    g2 e4 | cis4 a4 d4 | g4 a4-. a,4-. | d4-. d,4-.
+    \repeat volta 2 {
+      \partial 4 r4
+      g4-. a4-. b4-. | b4( a4) r4 |
+      fis4-. g4-. a4-. | a4( g4) r4 |
 
-    \partial 4 r4
-    e'4-. d'4-. c4-. | b4 a4 a8 fis8 | d4-. c'4-. b4-. | a4 g4 r4 |
-    c2 a4 | fis4 d4 g4 | c4 d4-. d,4-. | g2
+      g2( e4 | cis4 a4 d4) | g4( a4-.) a,4-. | d4-. d,4-.
+    }
 
-    \key c \major
-    \partial 4 c,8 e8
-    R2.*8
+    \repeat volta 2 {
+      \partial 4
+      r4 e'4-. d'4-. c4-. | b4( a4) a8( fis8 | d4)-. c'4-. b4-. | a4( g4) r4 |
 
-    \partial 4 r4
-    R2.*7
-
-    c2
-
+      c2( a4 | fis4 d4 g4) | c4( d4)-. d,4-. | g2
+    }
   }
+}
+
+lh-c = {
+    \key c \major
+    \relative g {
+      \repeat volta 2 {
+        \partial 4
+        c,8( e8 <c g'>4)-. <c g'>4-. <b g'>4-. | <c g'>4( d4) <b g'>8( d8 <b g'>4)-. <b g'>4-. <b g'>4-.
+
+        <c g>2 c'16( b16 a16 g16 fis2) b16( a16 g16 fis16 e2) b'4( c4 d4-.) d,4-. | g2
+      }
+
+      \repeat volta 2 {
+        \partial 4
+        r4 R2.*7
+
+        c2
+      }
+  }
+}
+
+lh = {
+  \clef "bass"
+  \lh-g
+  \lh-c
 }
 
 \score {
