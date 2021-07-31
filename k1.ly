@@ -10,6 +10,17 @@
   maintainerEmail = "timburgess@mac.com"
 }
 
+% adjust overall size
+#(set-global-staff-size 24)
+
+\paper {
+  system-system-spacing =
+    #'((basic-distance . 25) 
+       (minimum-distance . 8)
+       (padding . 4)
+       (stretchability . 60)) 
+}
+
 global = {
   \time 3/4
   \tempo 4 = 80
@@ -103,7 +114,9 @@ lh = {
 }
 
 \score {
-   \context PianoStaff << 
+   \context PianoStaff \with {
+    \override StaffGrouper.staffgroup-staff-spacing.basic-distance = #25
+   } <<
     \context Staff = "rh" <<
       \global
       \rh
@@ -117,6 +130,7 @@ lh = {
      % put key sig change before volta
      \context {
         \Score
+        \override StaffGrouper.staff-staff-spacing.basic-distance = #30
         \override BreakAlignment.break-align-orders =
            #(make-vector 3 '(
                     left-edge
